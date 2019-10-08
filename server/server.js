@@ -56,3 +56,8 @@ app.get( '/toggle', ( req, res )=>{
     accepting = !accepting;
     res.send( accepting );
 }) // end dev
+
+app.get( '/reset', ( req, res ) =>{
+    attributes = [];
+    res.send( 'reset, yo' );
+})
