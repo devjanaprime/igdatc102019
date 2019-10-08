@@ -36,14 +36,14 @@ let submitAttributes = () =>{
         axios.post('/attributes', { attributes } )
           .then(function (response) {
             console.log(response);
-            if( response.status === 200 ){
+            if( response.status === 201 ){
                 alert( 'thanks!');
+                attributes = [];
+                updateAttributes();
             }
             else{
                 alert( 'looks like polling is closed...');
             }
-            attributes = [];
-            updateAttributes();
           })
           .catch(function (error) {
             console.log(error);

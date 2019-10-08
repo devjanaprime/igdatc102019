@@ -9,6 +9,7 @@ app.use( bodyParser.json() );
 // globals
 const port = process.env.PORT || 5000;
 let attributes = [];
+let accepting = true;
 
 // spin up server
 app.listen( port, ()=>{
@@ -49,4 +50,9 @@ app.post( '/attributes', ( req, res ) =>{
         res.sendStatus( 200 );
     }
     
-}) //end post
+}) // end post
+
+app.get( '/toggle', ( req, res )=>{
+    accepting = !accepting;
+    res.send( accepting );
+}) // end dev

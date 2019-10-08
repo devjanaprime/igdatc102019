@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/axios.min.js"></script>
+    <script src="scripts/admin.js"></script>
+    <title>Dev's page</title>
+</head>
+<body>
+    <div>
+        Accepting submissions: <span id="acceptingOut">-</span> <button onClick="toggleAccepting()">Toggle</button><button onClick="updateList()">Refresh</button>
+    </div>
+    <div>
+        <ul id="outputUl">
+
+        </ul>
+        <h3 id="countOut"></h3>
+        <h3 id="affectedOut"></h3>
+        <h3 id="percentOut"></h3>
+    </div>
+</body>
+</html>
