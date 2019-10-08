@@ -33,6 +33,21 @@ let submitAttributes = () =>{
     }
     else{
         console.log( 'sending:', attributes );
+        axios.post('/attributes', { attributes } )
+          .then(function (response) {
+            console.log(response);
+            if( response.status === 200 ){
+                alert( 'thanks!');
+            }
+            else{
+                alert( 'looks like polling is closed...');
+            }
+            attributes = [];
+            updateAttributes();
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
     }
 }
 
