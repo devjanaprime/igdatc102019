@@ -40,4 +40,5 @@ let updateList = () =>{
 }
 
 toggleAccepting();
+toggleAccepting();
 updateList();
